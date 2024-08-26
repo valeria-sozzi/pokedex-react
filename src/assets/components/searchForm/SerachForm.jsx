@@ -1,15 +1,18 @@
 import React from "react";
+import "./SearchForm.scss";
 
 const SerachForm = ({ searchPokemon, setSearchPokemon }) => {
   return (
-    <div>
+    <div className="search-container">
       <label>Cerca Pokemon per Nome o ID</label>
-      <input
-        type="text"
-        value={searchPokemon}
-        onChange={(e) => setSearchPokemon(e.target.value)}
-      />
-      <button>Cerca Pokemon</button>
+      <div>
+        <input
+          type="text"
+          value={searchPokemon}
+          onChange={(e) => setSearchPokemon(e.target.value)}
+        />
+        <button>Cerca Pokemon</button>
+      </div>
     </div>
   );
 };
